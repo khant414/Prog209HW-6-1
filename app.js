@@ -23,20 +23,15 @@ app.get('/', function(req, res) {
 });
 
 app.get('/tvshows', function(req, res) {
-    res.render('pages/tvshows');
+    let favoriteTvShows = ["Buying Alaska","Mind Hunters","Moto GP"];
+    res.render('pages/tvshows', {
+            favoriteTvShows: favoriteTvShows
+    });
 });
 
 // about page 
 app.get('/about', function(req, res) {
     res.render('pages/about');
-});
-
-app.get('/dudewheresmycar', function(req, res) {
-    res.render('pages/dudewheresmycar');
-});
-
-app.get('/dogs', function(req, res ){
-    res.render('pages/dogs')
 });
 
 
