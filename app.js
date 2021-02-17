@@ -28,6 +28,15 @@ app.get('/tvshows', function(req, res) {
             favoriteTvShows: favoriteTvShows
     });
 });
+// use res.render to load up an ejs view file
+// index page
+
+app.get('/Movies', function(req, res) {
+    let favoriteMovies = ["Tenet","Half Brothers","Bad Boys"];
+    res.render('pages/Movies', {
+            favoriteMovies: favoriteMovies 
+    });
+});
 
 // about page 
 app.get('/about', function(req, res) {
