@@ -23,7 +23,12 @@ app.get('/', function(req, res) {
 });
 
 app.get('/tvshows', function(req, res) {
-    let favoriteTvShows = ["Buying Alaska","Mind Hunters","Moto GP"];
+    
+    let favoriteTvShows ={
+        Movie1:"Buying Alaska",
+        Movie2:"Mind Hunters",
+        Movie3: "Moto GP"
+    };
     res.render('pages/tvshows', {
             favoriteTvShows: favoriteTvShows
     });
