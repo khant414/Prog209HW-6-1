@@ -25,9 +25,9 @@ app.get('/', function(req, res) {
 app.get('/tvshows', function(req, res) {
     
     let favoriteTvShows ={
-        Movie1:"Buying Alaska",
-        Movie2:"Mind Hunters",
-        Movie3: "Moto GP"
+        tvshow1:"Buying Alaska",
+        tvshow2:"Mind Hunters",
+        tvshow3: "Moto GP"
     };
     res.render('pages/tvshows', {
             favoriteTvShows: favoriteTvShows
@@ -35,9 +35,14 @@ app.get('/tvshows', function(req, res) {
 });
 // use res.render to load up an ejs view file
 // index page
+//let favoriteMovies = ["Tenet","Half Brothers","Bad Boys"];
 
 app.get('/Movies', function(req, res) {
-    let favoriteMovies = ["Tenet","Half Brothers","Bad Boys"];
+    let favoriteMovies ={
+        Movie1:"Tenet",
+        Movie2:"Half Brothers",
+        Movie3: "Bad Boys"
+    };
     res.render('pages/Movies', {
             favoriteMovies: favoriteMovies 
     });
